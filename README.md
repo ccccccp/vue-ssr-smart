@@ -10,11 +10,11 @@
 
 ## 需要支持的浏览器
 
-1. MS IE11(无需支持 IE10 及以下版本)
-2. MS Edge
-3. Google Chrome
-4. Mozilla Firefox
-5. Apple Safari 10+
+- MS IE11(无需支持 IE10 及以下版本)
+- MS Edge
+- Google Chrome
+- Mozilla Firefox
+- Apple Safari 10+
 
 ## 启动项目
 
@@ -33,7 +33,8 @@ npm run dev
 npm run start
 
 ```
-##增加需要服务端渲染数据的组件
+
+## 增加需要服务端渲染数据的组件
 
 - 需要用`vuex`存数据
 - 在组件中增加asyncData方法来`dispatch`
