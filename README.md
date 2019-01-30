@@ -1,11 +1,12 @@
 # vue-ssr
 
+
 ## 支持的功能
 
-1.公共模块分离
-2.路由懒加载
-3.服务端渲染数据预取
-4.本地调试热模块替换
+- 公共模块分离
+- 路由懒加载
+- 服务端渲染数据预取
+- 本地调试热模块替换
 
 ## 需要支持的浏览器
 
@@ -30,6 +31,27 @@ npm run dev
 
 # 构建并运行服务
 npm run start
+
+```
+##增加需要服务端渲染数据的组件
+
+- 需要用`vuex`存数据
+- 在组件中增加asyncData方法来`dispatch`
+```js
+
+import { mapState, mapActions, mapGetters } from "vuex";
+
+export default {
+    name:'xxx',
+    computed:{
+        ...mapState({
+            homeList:(state)=> state.home.data
+        })
+    },
+    asyncData({store,route}){
+        return store.dispatch("getHomeData");
+    }
+}
 
 ```
 
